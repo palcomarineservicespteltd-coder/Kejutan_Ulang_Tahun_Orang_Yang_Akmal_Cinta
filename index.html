@@ -4,193 +4,353 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Selamat Ulang Tahun Nurul Aisyah ❤️</title>
+
+  <title>For Nurul Aisyah ❤️</title>
 
   <style>
     * {
       box-sizing: border-box;
     }
 
+    :root {
+      --pink: #ff4fa3;
+      --pink-light: #ff9ccc;
+      --dark: #09050d;
+      --card: #160b18;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ffd6e7, #fff0f5, #ffc2dc);
-      color: #7a214b;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #ffe4f1;
       text-align: center;
+      background:
+        radial-gradient(ellipse at top, #40102e 0%, transparent 55%),
+        linear-gradient(145deg, #050307, #170817 55%, #08040b);
+      overflow-x: hidden;
     }
 
     .container {
       width: 100%;
-      max-width: 650px;
-      margin: 0 auto;
-      padding: 24px 18px 40px;
+      max-width: 680px;
+      margin: auto;
+      padding: 25px 18px 45px;
+      position: relative;
+      z-index: 1;
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.92);
-      padding: 28px 20px;
+      margin-top: 28px;
+      padding: 32px 22px;
       border-radius: 24px;
-      box-shadow: 0 8px 25px rgba(180, 50, 100, 0.16);
-      margin-top: 30px;
+      background: linear-gradient(
+        145deg,
+        rgba(43, 13, 39, 0.97),
+        rgba(16, 8, 22, 0.98)
+      );
+      border: 1px solid rgba(255, 79, 163, 0.42);
+      box-shadow:
+        0 0 25px rgba(255, 30, 140, 0.12),
+        inset 0 0 25px rgba(255, 79, 163, 0.035);
+    }
+
+    .eyebrow {
+      color: var(--pink-light);
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
     }
 
     h1 {
-      font-size: 30px;
-      line-height: 1.35;
-      margin-bottom: 14px;
+      color: #ffd1e7;
+      font-size: clamp(28px, 7vw, 43px);
+      line-height: 1.25;
+      margin: 18px 0;
+      text-shadow: 0 0 20px rgba(255, 79, 163, 0.25);
+    }
+
+    h2 {
+      color: var(--pink-light);
+      font-size: 23px;
     }
 
     p {
       font-size: 16px;
-      line-height: 1.8;
+      line-height: 1.9;
+      color: #f4cddd;
     }
 
-    .heart {
-      font-size: 55px;
-      margin: 10px 0;
-      animation: detak 1.2s infinite;
+    .cake {
+      font-family: Arial, sans-serif;
+      font-size: 90px;
+      margin: 18px 0;
+      filter: drop-shadow(0 0 22px rgba(255, 79, 163, 0.4));
+      animation: float 3s ease-in-out infinite;
     }
 
-    @keyframes detak {
+    @keyframes float {
       0%, 100% {
-        transform: scale(1);
+        transform: translateY(0);
       }
       50% {
-        transform: scale(1.12);
+        transform: translateY(-9px);
       }
+    }
+
+    .glow {
+      width: 120px;
+      height: 2px;
+      margin: 22px auto;
+      background: var(--pink);
+      box-shadow: 0 0 15px var(--pink);
     }
 
     button {
-      background: #e84393;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      padding: 14px 30px;
-      font-size: 17px;
+      border: 1px solid #ffabd2;
+      border-radius: 40px;
+      padding: 15px 27px;
+      margin-top: 20px;
+      background: linear-gradient(135deg, #ff4fa3, #c51b79);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
       font-weight: bold;
+      letter-spacing: 1px;
       cursor: pointer;
-      margin-top: 18px;
-      box-shadow: 0 5px 12px rgba(232, 67, 147, 0.25);
+      box-shadow: 0 0 24px rgba(255, 79, 163, 0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     button:hover {
-      background: #d63384;
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(255, 79, 163, 0.5);
     }
 
     #pesan {
       display: none;
     }
 
-    .hadiah {
-      background: #fff0f6;
-      border: 2px dashed #f08ab8;
-      border-radius: 18px;
-      padding: 16px;
-      margin: 22px 0;
+    .message {
+      padding: 20px 0;
     }
 
-    .uang {
-      font-size: 28px;
-      font-weight: bold;
-      color: #d63384;
+    .video-frame {
+      margin: 25px auto;
+      padding: 8px;
+      max-width: 460px;
+      border: 1px solid rgba(255, 79, 163, 0.6);
+      border-radius: 20px;
+      background: #0b060d;
+      box-shadow: 0 0 28px rgba(255, 79, 163, 0.14);
     }
 
     video {
       display: block;
       width: 100%;
-      max-width: 420px;
-      margin: 22px auto;
-      border-radius: 16px;
+      border-radius: 13px;
       background: #000;
     }
 
-    .penutup {
-      font-size: 20px;
-      font-weight: bold;
-      margin-top: 25px;
+    .gift {
+      margin: 26px 0;
+      padding: 22px 15px;
+      border: 1px solid rgba(255, 79, 163, 0.55);
+      border-radius: 20px;
+      background: linear-gradient(135deg, #2b0c25, #160b18);
     }
 
-    .kecil {
-      font-size: 13px;
-      color: #a34d75;
+    .money {
+      margin: 12px 0;
+      color: #ff79ba;
+      font-family: Arial, sans-serif;
+      font-size: 34px;
+      font-weight: bold;
+      text-shadow: 0 0 18px rgba(255, 79, 163, 0.3);
+    }
+
+    .signature {
+      margin-top: 28px;
+      color: #ff9ccc;
+      font-size: 21px;
+      font-style: italic;
+    }
+
+    .small {
+      color: #c995b0;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+    }
+
+    .hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -40px;
+      color: #ff4fa3;
+      opacity: 0;
+      font-family: Arial, sans-serif;
+      animation: rise 9s linear infinite;
+    }
+
+    .heart:nth-child(1) {
+      left: 8%;
+      animation-delay: 0s;
+    }
+
+    .heart:nth-child(2) {
+      left: 27%;
+      animation-delay: 3s;
+      font-size: 17px;
+    }
+
+    .heart:nth-child(3) {
+      left: 70%;
+      animation-delay: 1.5s;
+      font-size: 24px;
+    }
+
+    .heart:nth-child(4) {
+      left: 90%;
+      animation-delay: 5s;
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      15% {
+        opacity: 0.55;
+      }
+      85% {
+        opacity: 0.4;
+      }
+      100% {
+        transform: translateY(-110vh) rotate(35deg);
+        opacity: 0;
+      }
+    }
+
+    footer {
+      padding: 22px 0 0;
+      color: #b782a0;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <div class="hearts" aria-hidden="true">
+    <span class="heart">♥</span>
+    <span class="heart">♥</span>
+    <span class="heart">♥</span>
+    <span class="heart">♥</span>
+  </div>
+
+  <main class="container">
 
     <!-- HALAMAN PEMBUKA -->
     <section id="awal" class="card">
-      <div class="heart">💗</div>
+      <div class="eyebrow">A special day for someone special</div>
 
-      <h1>Hai, Nurul Aisyah! 🌸</h1>
+      <div class="cake">🎂</div>
+
+      <h1>Happy Birthday,<br>Nurul Aisyah</h1>
+
+      <div class="glow"></div>
 
       <p>
-        Ada kejutan kecil yang sudah disiapkan khusus
-        untuk kamu.
+        Hari ini adalah hari istimewa untuk seseorang
+        yang juga istimewa. ❤️
       </p>
 
       <p>
-        Siap membuka pesan spesial dari Akmal? 🥰
+        Ada pesan dan kejutan kecil yang sudah disiapkan
+        khusus untuk kamu.
       </p>
 
       <button type="button" onclick="lihatPesan()">
-        LIHAT 💌
+        BUKA KEJUTAN 🎂
       </button>
+
+      <p class="small">Made with love by Akmal ♥</p>
     </section>
 
-    <!-- UCAPAN DAN VIDEO -->
+    <!-- HALAMAN UCAPAN DAN VIDEO -->
     <section id="pesan" class="card">
-      <div class="heart">🎂❤️</div>
+      <div class="eyebrow">Today is all about you</div>
 
-      <h1>
-        Selamat Ulang Tahun<br>
-        Nurul Aisyah yang Cantik! 🎉
-      </h1>
+      <h1>Selamat Ulang Tahun,<br>Nurul Aisyah ❤️</h1>
 
-      <p>
-        Selamat bertambah usia, sayang. ❤️
-        Semoga setiap harimu dipenuhi kebahagiaan,
-        kesehatan, ketenangan, dan hal-hal baik.
+      <div class="glow"></div>
+
+      <div class="message">
+        <p>
+          Untuk Nurul Aisyah yang cantik,
+          selamat bertambah usia. 🎂
+        </p>
+
+        <p>
+          Semoga setiap langkahmu dipenuhi kebahagiaan,
+          kesehatan, ketenangan, dan rezeki yang melimpah.
+          Semoga semua impianmu perlahan menjadi kenyataan.
+        </p>
+
+        <p>
+          Tetaplah menjadi pribadi yang baik, kuat,
+          dan selalu tersenyum. Semoga hal-hal indah
+          selalu datang menghampirimu. 💗
+        </p>
+      </div>
+
+      <!-- VIDEO SPESIAL -->
+      <h2>Our Special Moment 🎬</h2>
+
+      <p class="small">
+        Sebuah video spesial untuk kamu.
       </p>
 
-      <p>
-        Semoga semua impian dan keinginan kamu
-        satu per satu menjadi kenyataan.
-        Jangan pernah berhenti tersenyum dan
-        menjadi Nurul yang istimewa. 🌷
-      </p>
+      <div class="video-frame">
+        <video controls playsinline preload="metadata">
+          <source src="Video_Ulang_Tahun.mp4" type="video/mp4">
+          Browser kamu tidak mendukung pemutaran video.
+        </video>
+      </div>
 
-      <!-- VIDEO ULANG TAHUN -->
-      <h2>🎬 Video Spesial untuk Kamu</h2>
-
-      <video controls playsinline preload="metadata">
-        <source src="Video_Ulang_Tahun.mp4" type="video/mp4">
-        Browser kamu tidak mendukung pemutaran video.
-      </video>
-
-      <p class="kecil">
-        Putar videonya untuk melihat kejutan spesial ini. 💕
+      <p class="small">
+        Jika video tidak muncul, periksa nama dan lokasi file video di GitHub.
       </p>
 
       <!-- HADIAH -->
-      <div class="hadiah">
-        <h2>🎁 Hadiah Spesial untuk Kamu</h2>
+      <div class="gift">
+        <div class="eyebrow">A little gift for you</div>
+
+        <h2>🎁 Hadiah Ulang Tahun</h2>
 
         <p>
           Kamu mendapatkan uang sebesar
         </p>
 
-        <div class="uang">Rp50.000</div>
+        <div class="money">Rp50.000</div>
 
         <p>
           dari Akmal yang ganteng ini. 😎❤️
         </p>
       </div>
 
-      <!-- DOA DAN PESAN AKMAL -->
+      <!-- PESAN ROMANTIS -->
+      <h2>A Wish for Us 💌</h2>
+
       <p>
         Doakan semoga rezeki pasangan kamu ini lancar,
         agar aku bisa menghalalkan kamu dalam waktu dekat.
@@ -200,24 +360,32 @@
       <p>
         Semoga kita selalu diberi kesehatan, kesabaran,
         kelancaran rezeki, dan kesempatan untuk
-        mewujudkan impian bersama.
-      </p>
-
-      <p class="penutup">
-        Sekali lagi, selamat ulang tahun, Nurul Aisyah! 💖
+        membangun masa depan bersama.
       </p>
 
       <p>
-        Dengan penuh kasih sayang,<br>
-        <strong>Akmal ❤️</strong>
+        Terima kasih sudah menjadi seseorang yang berarti.
+        Semoga ulang tahunmu kali ini membawa banyak
+        cerita indah yang akan selalu kamu kenang.
+      </p>
+
+      <div class="glow"></div>
+
+      <p class="signature">
+        With love,<br>
+        Akmal ❤️
       </p>
 
       <button type="button" onclick="kembaliAwal()">
-        KEMBALI 💌
+        KEMBALI KE AWAL
       </button>
     </section>
 
-  </div>
+    <footer>
+      MADE ESPECIALLY FOR NURUL AISYAH
+    </footer>
+
+  </main>
 
   <script>
     function lihatPesan() {
